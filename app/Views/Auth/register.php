@@ -42,36 +42,44 @@
             <div class="row">
                 <div class="col col-login mx-auto">
                     <div class="text-center mb-6">
-                        <img src="<?= base_url('Assets/brand/tabler.svg') ?>" class="h-6" alt="">
+                        <img src="<?= base_url('Assets/img/logo-banten.png') ?>" class="h-8"  height="1000px"  alt="Logo">
                     </div>
                     <form class="card" action="" method="post">
                         <div class="card-body p-6">
-                            <div class="card-title">Create new account</div>
+                            <div class="card-title">Buat Akun Baru</div>
                             <div class="form-group">
-                                <label class="form-label">Name</label>
-                                <input type="text" class="form-control" placeholder="Enter name">
+                                <label class="form-label">Nama</label>
+                                <input type="text" class="form-control" placeholder="Masukkan Nama" required>
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Email address</label>
-                                <input type="email" class="form-control" placeholder="Enter email">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" placeholder="Masukkan Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Alamat</label>
+                                <textarea class="form-control" id="Alamat" rows="3" placeholder="Masukkan Alamat"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Kode Pos</label>
+                                <input type="number" class="form-control" placeholder="Masukkan Kode Pos" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Password</label>
-                                <input type="password" class="form-control" placeholder="Password">
+                                <input type="password" class="form-control" placeholder="Masukkan Password" required>
                             </div>
                             <div class="form-group">
                                 <label class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" />
-                                    <span class="custom-control-label">Agree the <a href="terms.html">terms and policy</a></span>
+                                    <span class="custom-control-label">Setuju dengan <a href="terms.html">Syarat & Ketentuan</a></span>
                                 </label>
                             </div>
                             <div class="form-footer">
-                                <button type="submit" class="btn btn-primary btn-block">Create new account</button>
+                                <button type="submit" class="btn btn-green btn-block">Create new account</button>
                             </div>
                         </div>
                     </form>
                     <div class="text-center text-muted">
-                        Already have account? <a href="./login.html">Sign in</a>
+                        Sudah memiliki akun? <a href="<? base_url() ?>">Login</a>
                     </div>
                 </div>
             </div>
