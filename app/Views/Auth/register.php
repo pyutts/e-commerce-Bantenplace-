@@ -44,28 +44,33 @@
                     <div class="text-center mb-6">
                         <img src="<?= base_url('Assets/img/logo-banten.png') ?>" class="h-8"  height="1000px"  alt="Logo">
                     </div>
-                    <form class="card" action="" method="post">
+                    <?= csrf_field(); ?>
+                    <form class="card" action="/auth/attemptRegister" method="post">
                         <div class="card-body p-6">
                             <div class="card-title">Buat Akun Baru</div>
                             <div class="form-group">
+                                <label class="form-label">Username</label>
+                                <input type="text" name="Username" class="form-control" placeholder="Masukkan Username" required>
+                            </div>
+                            <div class="form-group">
                                 <label class="form-label">Nama</label>
-                                <input type="text" class="form-control" placeholder="Masukkan Nama" required>
+                                <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Email</label>
-                                <input type="email" class="form-control" placeholder="Masukkan Email" required>
+                                <input type="email" name="email" class="form-control" placeholder="Masukkan Email" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Alamat</label>
-                                <textarea class="form-control" id="Alamat" rows="3" placeholder="Masukkan Alamat"></textarea>
+                                <textarea class="form-control" id="alamat" name="alamat" rows="3" placeholder="Masukkan Alamat"></textarea>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Kode Pos</label>
-                                <input type="number" class="form-control" placeholder="Masukkan Kode Pos" required>
+                                <input type="number" name="kode_pos" class="form-control" placeholder="Masukkan Kode Pos" required>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Password</label>
-                                <input type="password" class="form-control" placeholder="Masukkan Password" required>
+                                <input type="password" name="password" class="form-control" placeholder="Masukkan Password" required>
                             </div>
                             <div class="form-group">
                                 <label class="custom-control custom-checkbox">

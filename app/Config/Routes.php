@@ -8,9 +8,13 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->get('/', 'Home::index');
 
-$routes->get('login','Login::Masuk');
+// login
+$routes->get('/login', 'Auth::login');
+$routes->post('/auth/attemptLogin', 'Auth::attemptLogin');
+$routes->get('/register', 'Auth::register');
+$routes->post('/auth/attemptRegister', 'Auth::attemptRegister');
+$routes->get('/logout', 'Auth::logout');
 
-$routes->get('register','Register::Daftar');
-
-// Routes Get View Ke admin dashboard
-$routes->get('home-dashboard','Dashboard::admin');
+// dashboard dan landing-page 
+$routes->get('/admin/home-dashbord', 'AdminController::dashboard', ['filter' => 'role:admin']);
+$routes->get('/user/home-landing', 'UserController::landingPage', ['filter' => 'role:user']);
